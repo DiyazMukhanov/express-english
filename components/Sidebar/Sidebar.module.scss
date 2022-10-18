@@ -1,0 +1,18 @@
+.list {
+  list-style-type: none;
+  font-weight: 700;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  ul {
+    list-style-type: none;
+    font-weight: 400;
+    //border: solid red 1px;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}
