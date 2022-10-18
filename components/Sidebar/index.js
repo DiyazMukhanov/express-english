@@ -1,192 +1,201 @@
 import {useState} from "react"
 import styles from "./Sidebar.module.scss"
 import Link from "next/link";
+import classNames from "classnames"
 
 const Sidebar = () => {
     const [openedLesson, setOpenedLesson] = useState('')
     const parts = [
         {
             part: 'Видео урок',
-            slug: 'Video'
+            slug: 'video'
         },
         {
             part: 'Аудирование',
-            slug: 'Audio'
+            slug: 'audio'
         },
         {
             part: 'Чтение',
-            slug: 'Reading'
+            slug: 'reading'
         },
         {
             part: 'Письмо',
-            slug: 'Writing'
+            slug: 'writing'
         }
     ]
-        // ['Видео урок', 'Аудирование', 'Чтение', 'Письмо']
+
     const lessons = [
         {
             lesson: 'Урок 1',
-            lessonNumber: 1,
+            lessonNumber: 'one',
             parts: parts
         },
         {
             lesson: 'Урок 2',
-            lessonNumber: 2,
+            lessonNumber: 'two',
             parts: parts
         },
         {
             lesson: 'Урок 3',
-            lessonNumber: 3,
+            lessonNumber: 'three',
             parts: parts
         },
         {
             lesson: 'Урок 4',
-            lessonNumber: 4,
+            lessonNumber: 'four',
             parts: parts
         },
         {
             lesson: 'Урок 5',
-            lessonNumber: 5,
+            lessonNumber: 'five',
             parts: parts
         },
         {
             lesson: 'Урок 6',
-            lessonNumber: 6,
+            lessonNumber: 'six',
             parts: parts
         },
         {
             lesson: 'Урок 7',
-            lessonNumber: 7,
+            lessonNumber: 'seven',
             parts: parts
         },
         {
             lesson: 'Урок 8',
-            lessonNumber: 8,
+            lessonNumber: 'eight',
             parts: parts
         },
         {
             lesson: 'Урок 9',
-            lessonNumber: 9,
+            lessonNumber: 'nine',
             parts: parts
         },
         {
             lesson: 'Урок 10',
-            lessonNumber: 10,
+            lessonNumber: 'ten',
             parts: parts
         },
         {
             lesson: 'Урок 11',
-            lessonNumber: 11,
+            lessonNumber: 'eleven',
             parts: parts
         },
         {
             lesson: 'Урок 12',
-            lessonNumber: 12,
+            lessonNumber: 'twelve',
             parts: parts
         },
         {
             lesson: 'Урок 13',
-            lessonNumber: 13,
+            lessonNumber: 'thirteen',
             parts: parts
         },
         {
             lesson: 'Урок 14',
-            lessonNumber: 14,
+            lessonNumber: 'fourteen',
             parts: parts
         },
         {
             lesson: 'Урок 15',
-            lessonNumber: 15,
+            lessonNumber: 'fifteen',
             parts: parts
         },
         {
             lesson: 'Урок 16',
-            lessonNumber: 16,
+            lessonNumber: 'sixteen',
             parts: parts
         },
         {
             lesson: 'Урок 17',
-            lessonNumber: 17,
+            lessonNumber: 'seventeen',
             parts: parts
         },
         {
             lesson: 'Урок 18',
-            lessonNumber: 18,
+            lessonNumber: 'eighteen',
             parts: parts
         },
         {
             lesson: 'Урок 19',
-            lessonNumber: 19,
+            lessonNumber: 'nineteen',
             parts: parts
         },
         {
             lesson: 'Урок 20',
-            lessonNumber: 20,
+            lessonNumber: 'twenty',
             parts: parts
         },
         {
             lesson: 'Урок 21',
-            lessonNumber: 21,
+            lessonNumber: 'twenty-one',
             parts: parts
         },
         {
             lesson: 'Урок 22',
-            lessonNumber: 22,
+            lessonNumber: 'twenty-two',
             parts: parts
         },
         {
             lesson: 'Урок 23',
-            lessonNumber: 23,
+            lessonNumber: 'twenty-three',
             parts: parts
         },
         {
             lesson: 'Урок 24',
-            lessonNumber: 24,
+            lessonNumber: 'twenty-four',
             parts: parts
         },
         {
             lesson: 'Урок 25',
-            lessonNumber: 25,
+            lessonNumber: 'twenty-five',
             parts: parts
         },
         {
             lesson: 'Урок 26',
-            lessonNumber: 26,
+            lessonNumber: 'twenty-six',
             parts: parts
         },
         {
             lesson: 'Урок 27',
-            lessonNumber: 27,
+            lessonNumber: 'twenty-seven',
             parts: parts
         },
         {
             lesson: 'Урок 28',
-            lessonNumber: 28,
+            lessonNumber: 'twenty-eight',
             parts: parts
         },
         {
             lesson: 'Урок 29',
-            lessonNumber: 29,
+            lessonNumber: 'twenty-nine',
             parts: parts
         },
         {
             lesson: 'Урок 30',
-            lessonNumber: 30,
+            lessonNumber: 'thirty',
             parts: parts
         },
     ]
 
     return (
         <div className={styles.container}>
+            <p className={styles.paragraph}>Уроки</p>
             <ul>
                 {lessons.map(
                     item =>
-                        <li key={item.lesson} className={styles.list} onClick={() => setOpenedLesson(item.lesson)}>
+                        <li key={item.lesson}
+                            className={classNames({
+                                 [styles.openedLesson]: openedLesson === item.lesson,
+                                 [styles.list]: openedLesson !== item.lesson
+                                }
+                            )
+                        }
+                            onClick={() => setOpenedLesson(item.lesson)}>
                             {item.lesson}
                             <ul>
                                 {openedLesson === item.lesson && item.parts.map(part =>
                                     <li><Link href={`/lessons/${item.lessonNumber}/${part.slug}`}>
-                                        <a>{part.part}</a>
+                                        <a className={styles.link}>{part.part}</a>
                                     </Link>
                                     </li>
                                 )}
