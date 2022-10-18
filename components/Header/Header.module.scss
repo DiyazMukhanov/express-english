@@ -1,13 +1,27 @@
 .container {
-  border: solid red 1px;
+  //border: solid red 1px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .left {
-  border: solid red 1px;
+  //border: solid red 1px;
   display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 40px;
+}
+
+.link {
+  font-weight: 700;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: var(--color-black);
+  }
 }
 
 .right {

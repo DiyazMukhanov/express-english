@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <div className={styles.container}>
         <div className={styles.left}>
-          <Link href='/lessons'><a>Уроки</a></Link>
-            <Link href='/service'><a>Служба поддержки</a></Link>
+          <Link href='/lessons'><a className={styles.link}>Уроки</a></Link>
+            <Link href='/service'><a className={styles.link}>Служба поддержки</a></Link>
         </div>
         <div className={styles.right}>
             <div className={styles.bell}>

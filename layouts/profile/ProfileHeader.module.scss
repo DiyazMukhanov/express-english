@@ -1,0 +1,49 @@
+@import "styles/breakpoints";
+
+.container {
+  background-color: var(--color-dark-blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.avatarBig {
+
+  @include size-phone-large {
+    display: none;
+  }
+}
+
+.left {
+  padding-top: 60px;
+  padding-bottom: 16px;
+  display: flex;
+  padding-left: 20px;
+}
+
+.nameBlock {
+  padding-left: 30px;
+}
+
+.name {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.email {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}

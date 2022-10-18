@@ -1,0 +1,40 @@
+
+.container {
+  border: solid var(--color-grey) 1px;
+  max-width: 360px;
+  padding-left: 15px;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 12px;
+}
+
+.subscription {
+  //border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header {
+  //border: solid red 1px;
+  margin: 0;
+}
+
+.period {
+  //border: solid red 1px;
+  margin: 0;
+}
+
+.button {
+  color: var(--color-light-blue-100);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  //border: solid red 1px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
