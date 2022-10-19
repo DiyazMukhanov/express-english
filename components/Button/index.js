@@ -14,14 +14,10 @@ export const Button = ({
         className
         )
 
-    const handleClick = event => {
-        onclick(event);
-    }
-
     return (
         <button
         className={classes}
-        onClick={handleClick}
+        onClick={onClick}
     >
             {children}
         </button>);
