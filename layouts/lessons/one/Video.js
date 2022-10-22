@@ -1,9 +1,13 @@
-import LessonLayout from "../../../components/LessonLayout";
+import LessonLayout from "../../../components/LessonLayout"
+import VideoLesson from "../../../components/VideoLesson"
 
 
 const Video = () => {
+
     return (
-        <LessonLayout>Test</LessonLayout>
+        <LessonLayout part='Видео урок'>
+            <VideoLesson lessonNumber='one'/>
+        </LessonLayout>
     )
 }
 

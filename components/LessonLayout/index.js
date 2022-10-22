@@ -10,7 +10,7 @@ const LessonLayout = ({children, part}) => {
                 <Sidebar />
                 <div className={styles.lesson}>
                     <div className={styles.lessonHeader}>
-
+                       <h2>{part}</h2>
                     </div>
                     {children}
                 </div>

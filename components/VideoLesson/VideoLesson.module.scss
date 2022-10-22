@@ -1,0 +1,51 @@
+@import "styles/breakpoints";
+
+.paragraph {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  //position: relative;
+  //padding-top: 56.25%;
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  //border: solid red 1px;
+  height: 600px;
+
+  @include size-phone-large {
+    max-height: 400px;
+  }
+
+  @include size-phone-medium {
+    max-height: 200px;
+  }
+}
+
+.player {
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  max-height: 600px;
+  max-width: 800px;
+}
+
+.btnContainer {
+  //border: solid red 1px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  margin-top: 4.375em;
+  margin-right: 4.375em;
+}
+
+//.video {
+//  border: solid red 1px;
+//  border-radius: 20px;
+//}
