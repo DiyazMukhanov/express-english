@@ -12,11 +12,6 @@ const Landing = () => {
         }
     }
 
-    // const handleRegister = (e) => {
-    //     e.preventDefault()
-    //     router.push('/authorization/login')
-    // }
-
     return (
         <div className={styles.container}>
            <div className={styles.top}>
@@ -24,13 +19,15 @@ const Landing = () => {
                <Button variant='contained' className={styles.buttonRight} onClick={handleRouting('/authorization/registration')}>Регистрация</Button>
            </div>
             <div className={styles.middle}>
-                <h1 className={styles.heading}>Быстрый курс английского языка</h1>
+                <h1 className={styles.heading}>Английский за 30 уроков!</h1>
             </div>
             <div className={styles.bottom}>
-                <Button variant='contained' className={styles.buttonBottom} onClick={handleRouting('/lessons/one/video')}>Пройти курс</Button>
+                <Button variant='contained' className={styles.buttonBottom} onClick={handleRouting('/lessons/intro')}>Пройти курс</Button>
             </div>
         </div>
     )
 }
 
 export default Landing
+
+//https://nicetalkingwithyou.com/mp3-downloads/mp3-downloads-text1/

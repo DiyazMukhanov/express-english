@@ -17,7 +17,7 @@ const Registration = () => {
               <div className={styles.formBlock}><label className={styles.label}>Повторите пароль</label>
                   <input placeholder='Повторите пароль' className={styles.input}></input></div>
               <Button variant='contained' size='small' className={styles.button}>Регистрация</Button>
-              <p className={styles.question}>У вас уже есть аккаунт? <span><Link href='/'><a className={styles.enterLink}>Войти</a></Link></span></p>
+              <p className={styles.question}>У вас уже есть аккаунт? <span><Link href='/authorization/login'><a className={styles.enterLink}>Войти</a></Link></span></p>
           </form>
        </div>
    )

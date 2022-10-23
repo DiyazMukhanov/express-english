@@ -1,0 +1,83 @@
+//.container {
+//  padding-left: 20px;
+//}
+
+.audio {
+  //border: solid red 1px;
+  width: 80vw;
+}
+
+.audioContainer {
+  //border: solid red 1px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.heading {
+  padding-left: 20px;
+}
+
+.button {
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+.text {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  font-weight: 700;
+}
+
+.test {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+
+.right {
+  background-color: lightgreen;
+}
+
+.wrong {
+  background-color: lightcoral;
+}
+
+.answerContainer {
+  //border: solid red 1px;
+  margin-bottom: 30px;
+  //padding-right: 10px;
+  //width: fit-content;
+}
+
+.wrongText {
+  color: darkred;
+  padding-left: 10px;
+}
+
+.rightText {
+  color: limegreen;
+  padding-left: 10px;
+}
+
+.answer {
+  width: fit-content;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: solid var(--color-grey) 1px;
+}
+
+.btnContainer {
+  //border: solid red 1px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonNext {
+  margin-top: 4.375em;
+  margin-right: 4.375em;
+}

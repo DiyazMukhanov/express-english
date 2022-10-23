@@ -1,0 +1,53 @@
+@import "styles/breakpoints";
+
+.btnContainer {
+  //border: solid red 1px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonNext {
+  margin-top: 4.375em;
+  margin-right: 4.375em;
+}
+
+.task {
+  padding-left: 20px;
+}
+
+.input {
+  border: solid var(--color-grey) 1px;
+  border-radius: 12px;
+  height: 200px;
+  width: 60vw;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.sendBtn {
+  margin-top: 10px;
+}
+
+.inputBtnContainer {
+  display: flex;
+  gap: 20px;
+
+  @include size-phone-large {
+    flex-direction: column;
+    width: 100px;
+  }
+}
+
+.example {
+  padding-top: 20px;
+  padding-right: 100px;
+
+  @include size-phone-large {
+    padding-right: 5px;
+  }
+}
