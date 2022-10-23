@@ -14,6 +14,7 @@ const Quiz = () => {
                 wordsEnArr={wordsEnArr}
                 wordsRuArr={wordsRuArr}
                 audioString={audioString}
+                lessonNumber='one'
             />
         </LessonLayout>
     )
