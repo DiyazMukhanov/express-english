@@ -1,17 +1,38 @@
-import styles from "../AudioLesson/AudioLesson.module.scss"
+import styles from "./ReadingLesson.module.scss"
 import audio from "../../layouts/lessons/one/Audio"
+import {Button} from "../Button";
+import {useState} from "react";
 
 
-const ReadingLesson = ({lessonNumber}) => {
+const ReadingLesson = ({lessonNumber, audioString, englishText, ruText}) => {
+    const [textValue, setTextValue] = useState('')
+
+    const inputValueHandler = (event) => {
+        setTextValue(event.target.value)
+    }
+
     return <div>
         <h2 className={styles.heading}>Прослушайте запись и прочитайте текст</h2>
         <div className={styles.audioContainer}>
             <audio
                 controls
-                src={`/audio/${lessonNumber}.mp3`}
+                src={audioString}
                 className={styles.audio}
             >
             </audio>
+        </div>
+        <div className={styles.textContainer}>
+            <div className={styles.text}>
+                {englishText}
+                <br/>
+                <br/>
+                {ruText}
+            </div>
+        </div>
+        <h2 className={styles.heading}>Напишите общий смысл текста на русском языке и нажмите на кнопку "Отправить"</h2>
+        <div className={styles.inputContainer}>
+        <textarea className={styles.input} onChange={inputValueHandler}/>
+        <Button variant='outlined' className={styles.sendBtn}>Отправить</Button>
         </div>
     </div>
 }

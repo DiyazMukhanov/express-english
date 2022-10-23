@@ -21,6 +21,14 @@ const Sidebar = () => {
         {
             part: 'Письмо',
             slug: 'writing'
+        },
+        {
+            part: 'Словарный запас',
+            slug: 'quiz'
+        },
+        {
+            part: 'Упражнения',
+            slug: 'exercise'
         }
     ]
 
