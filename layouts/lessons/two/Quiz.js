@@ -9,12 +9,12 @@ const Quiz = () => {
     const audioString = '/audio/one.mp3'
 
     return (
-        <LessonLayout part='Словарный запас' lessonNumber='one'>
+        <LessonLayout part='Словарный запас' lessonNumber='two'>
             <QuizLesson
                 wordsEnArr={wordsEnArr}
                 wordsRuArr={wordsRuArr}
                 audioString={audioString}
-                lessonNumber='one'
+                lessonNumber='two'
             />
         </LessonLayout>
     )

@@ -10,8 +10,8 @@ const Writing = () => {
     const task = 'Напишите в свободной форме о своей семье и нажмите на кнопку "Отправить"'
 
     return (
-        <LessonLayout part='Письмо' lessonNumber='one'>
-            <WritingLesson lessonNumber='one'
+        <LessonLayout part='Письмо' lessonNumber='two'>
+            <WritingLesson lessonNumber='two'
             englishText={englisText}
             ruText={ruText}
             task={task}

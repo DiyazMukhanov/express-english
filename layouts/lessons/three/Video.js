@@ -5,8 +5,8 @@ import VideoLesson from "../../../components/VideoLesson"
 const Video = () => {
 
     return (
-        <LessonLayout part='Видео урок' lessonNumber='one'>
-            <VideoLesson lessonNumber='one'/>
+        <LessonLayout part='Видео урок' lessonNumber='three'>
+            <VideoLesson lessonNumber='three'/>
         </LessonLayout>
     )
 }

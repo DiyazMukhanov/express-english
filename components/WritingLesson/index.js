@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import {Button} from "../Button";
 import {useState, useRef} from "react";
 
-const WritingLesson = ({englishText, ruText, task}) => {
+const WritingLesson = ({lessonNumber, englishText, ruText, task}) => {
     const [showExample, setShowExample] = useState(false)
     const [textValue, setTextValue] = useState('')
 
@@ -45,7 +45,7 @@ const WritingLesson = ({englishText, ruText, task}) => {
         <div className={styles.btnContainer}>
             <Button
                 className={styles.buttonNext}
-                onClick={handleRouting(`/lessons/one/quiz`)}
+                onClick={handleRouting(`/lessons/${lessonNumber}/quiz`)}
             >
                 Следующий раздел
             </Button>

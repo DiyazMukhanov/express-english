@@ -33,12 +33,9 @@ const Audio = () => {
     }
 
     return (
-        <LessonLayout
-            part='Аудио урок'
-            lessonNumber='one'
-        >
+        <LessonLayout part='Аудио урок' lessonNumber='three'>
            <AudioLesson
-               lessonNumber='one'
+               lessonNumber='three'
                englisText={englishText}
                ruText={ruText}
                audioString={audioString}

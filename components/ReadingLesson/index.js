@@ -2,6 +2,7 @@ import styles from "./ReadingLesson.module.scss"
 import audio from "../../layouts/lessons/one/Audio"
 import {Button} from "../Button";
 import {useState} from "react";
+import {useRouter} from "next/router";
 
 
 const ReadingLesson = ({lessonNumber, audioString, englishText, ruText}) => {
@@ -9,6 +10,15 @@ const ReadingLesson = ({lessonNumber, audioString, englishText, ruText}) => {
 
     const inputValueHandler = (event) => {
         setTextValue(event.target.value)
+    }
+
+    const router = useRouter()
+
+    const handleRouting = (url) => {
+        return function(e) {
+            e.preventDefault()
+            router.push(url)
+        }
     }
 
     return <div>
@@ -33,6 +43,15 @@ const ReadingLesson = ({lessonNumber, audioString, englishText, ruText}) => {
         <div className={styles.inputContainer}>
         <textarea className={styles.input} onChange={inputValueHandler}/>
         <Button variant='outlined' className={styles.sendBtn}>Отправить</Button>
+        </div>
+
+        <div className={styles.btnContainer}>
+            <Button
+                className={styles.buttonNext}
+                onClick={handleRouting(`/lessons/${lessonNumber}/writing`)}
+            >
+                Следующий раздел
+            </Button>
         </div>
     </div>
 }

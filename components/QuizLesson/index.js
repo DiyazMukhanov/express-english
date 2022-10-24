@@ -6,11 +6,11 @@ import {useRouter} from "next/router";
 
 const QuizLesson = ({wordsEnArr, wordsRuArr, audioString, lessonNumber}) => {
     const [quizCurrentEn, setQuizCurrentEn] = useState(wordsEnArr[0])
-    const [answerCheck, setAnswerCheck] = useState('wrong')
+    const [answerCheck, setAnswerCheck] = useState('neutral')
     const quizRef = useRef()
 
     const quizNextWord = () => {
-
+        setAnswerCheck('neutral')
         const indexOfCurrentWord = wordsEnArr.findIndex(el=>el===quizCurrentEn)
         const nextWord = wordsEnArr[indexOfCurrentWord+1]
         if(nextWord) {

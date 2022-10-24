@@ -14,9 +14,9 @@ const Reading = () => {
         '                Современное видовое название Panthera пришло в латынь из др.-греч. πάνθηρ. Последнее, в свою очередь, было заимствовано из какого-то восточного языка, ср. санскр. puṇḍarīkaḥ «тигр»[8]'
 
     return (
-        <LessonLayout part='Чтение' lessonNumber='one'>
+        <LessonLayout part='Чтение' lessonNumber='two'>
             <ReadingLesson
-                lessonNumber='one'
+                lessonNumber='two'
                 audioString={audioString}
                 englishText={englishText}
                 ruText={ruText}

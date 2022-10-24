@@ -1,3 +1,5 @@
+@import "styles/breakpoints";
+
 .lessonHeader {
   padding-top: 70px;
   padding-bottom: 30px;
@@ -5,6 +7,11 @@
   color: var(--color-white);
   background-image: url('/images/background.png');
   background-size: cover;
+
+  @include size-phone-large {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
 }
 
 .main {

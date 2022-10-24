@@ -1,0 +1,43 @@
+
+.container {
+  //border: solid red 1px;
+  padding-left: 20px;
+  li {
+    //border: solid red 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    width: 200px;
+    cursor: pointer;
+    padding-bottom: 10px;
+  }
+}
+
+.question {
+  font-weight: 700;
+}
+
+.paragraph {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: darkred;
+}
+
+.right {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: darkgreen;
+}
+
+.btnContainer {
+  //border: solid red 1px;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.buttonNext {
+  margin-top: 4.375em;
+  margin-right: 4.375em;
+}
