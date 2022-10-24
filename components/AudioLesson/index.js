@@ -10,14 +10,6 @@ const AudioLesson = ({lessonNumber, audioString, englisText, ruText}) => {
 
     const [textIsShown, setTextIsShown] = useState(false)
 
-    const router = useRouter()
-
-    const handleRouting = (url) => {
-        return function(e) {
-            e.preventDefault()
-            router.push(url)
-        }
-    }
 
     const showTextHandler = () => {
         setTextIsShown(!textIsShown)
@@ -51,14 +43,7 @@ const AudioLesson = ({lessonNumber, audioString, englisText, ruText}) => {
                 {!textIsShown ? "Показать текст" : "Скрыть текст" }
             </Button>
 
-            <div className={styles.btnContainer}>
-                <Button
-                    className={styles.buttonNext}
-                    onClick={handleRouting(`/lessons/${lessonNumber}/reading`)}
-                >
-                    Следующий раздел
-                </Button>
-            </div>
+
         </div>)
 }
 

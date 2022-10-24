@@ -3,6 +3,7 @@ import AudioLesson from "../../../components/AudioLesson";
 import styles from "../../../components/AudioLesson/AudioLesson.module.scss";
 import classNames from "classnames";
 import {useState} from "react";
+import NextPart from "../../../components/NextPart";
 
 
 const Audio = () => {
@@ -62,6 +63,7 @@ const Audio = () => {
                     {clickedThirdWrong && <p className={styles.wrongText}>Неверный ответ</p>}
                 </div>
             </div>
+            <NextPart lessonNumber='three'/>
         </LessonLayout>
     )
 }
